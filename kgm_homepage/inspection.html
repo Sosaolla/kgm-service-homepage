@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>차량 점검 신청</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="sub-header">
+    <h1>차량 점검 신청</h1>
+    <p>차량 정보를 입력하고 점검 요청을 제출해 주세요.</p>
+  </header>
+
+  <main class="page-section">
+    <form class="form-box" action="mailto:ekfskfk6103@ajou.ac.kr" method="post" enctype="text/plain">
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>보내는 사람 이메일</label>
+          <input type="email" name="보내는 사람 이메일" placeholder="example@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>고객명</label>
+          <input type="text" name="고객명" placeholder="홍길동" required>
+        </div>
+
+        <div class="form-group">
+          <label>연락처</label>
+          <input type="tel" name="연락처" placeholder="010-0000-0000" required>
+        </div>
+
+        <div class="form-group">
+          <label>차량 연식</label>
+          <input type="number" name="차량 연식" placeholder="예: 2022" required>
+        </div>
+
+        <div class="form-group">
+          <label>차량 모델</label>
+          <select name="차량 모델" required>
+            <option value="">차량 모델 선택</option>
+            <option value="토레스">토레스</option>
+            <option value="토레스 EVX">토레스 EVX</option>
+            <option value="렉스턴">렉스턴</option>
+            <option value="렉스턴 스포츠">렉스턴 스포츠</option>
+            <option value="코란도">코란도</option>
+            <option value="티볼리">티볼리</option>
+            <option value="무쏘">무쏘</option>
+            <option value="기타">기타</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>현재 주행거리</label>
+          <input type="number" name="현재 주행거리" placeholder="예: 85000" required>
+        </div>
+
+        <div class="form-group full">
+          <label>고객 요청 사항 / 이상 증상</label>
+          <textarea name="고객 요청 사항" placeholder="예: 엔진 경고등 점등, 브레이크 소음, 시동 불량 등"></textarea>
+        </div>
+      </div>
+
+      <table class="check-table">
+        <thead>
+          <tr>
+            <th>점검 항목</th>
+            <th>정상</th>
+            <th>점검 필요</th>
+            <th>잘 모름</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>엔진오일 / 오일 누유 상태</td>
+            <td><input type="radio" name="엔진오일 상태" value="정상"></td>
+            <td><input type="radio" name="엔진오일 상태" value="점검 필요"></td>
+            <td><input type="radio" name="엔진오일 상태" value="잘 모름"></td>
+          </tr>
+
+          <tr>
+            <td>브레이크 패드 / 제동 상태</td>
+            <td><input type="radio" name="브레이크 상태" value="정상"></td>
+            <td><input type="radio" name="브레이크 상태" value="점검 필요"></td>
+            <td><input type="radio" name="브레이크 상태" value="잘 모름"></td>
+          </tr>
+
+          <tr>
+            <td>타이어 마모 / 공기압 상태</td>
+            <td><input type="radio" name="타이어 상태" value="정상"></td>
+            <td><input type="radio" name="타이어 상태" value="점검 필요"></td>
+            <td><input type="radio" name="타이어 상태" value="잘 모름"></td>
+          </tr>
+
+          <tr>
+            <td>배터리 / 시동 상태</td>
+            <td><input type="radio" name="배터리 상태" value="정상"></td>
+            <td><input type="radio" name="배터리 상태" value="점검 필요"></td>
+            <td><input type="radio" name="배터리 상태" value="잘 모름"></td>
+          </tr>
+
+          <tr>
+            <td>냉각수 / 과열 여부</td>
+            <td><input type="radio" name="냉각수 상태" value="정상"></td>
+            <td><input type="radio" name="냉각수 상태" value="점검 필요"></td>
+            <td><input type="radio" name="냉각수 상태" value="잘 모름"></td>
+          </tr>
+
+          <tr>
+            <td>변속 충격 / 미션 상태</td>
+            <td><input type="radio" name="미션 상태" value="정상"></td>
+            <td><input type="radio" name="미션 상태" value="점검 필요"></td>
+            <td><input type="radio" name="미션 상태" value="잘 모름"></td>
+          </tr>
+
+          <tr>
+            <td>하체 소음 / 조향 상태</td>
+            <td><input type="radio" name="하체 조향 상태" value="정상"></td>
+            <td><input type="radio" name="하체 조향 상태" value="점검 필요"></td>
+            <td><input type="radio" name="하체 조향 상태" value="잘 모름"></td>
+          </tr>
+
+          <tr>
+            <td>경고등 점등 여부</td>
+            <td><input type="radio" name="경고등 상태" value="정상"></td>
+            <td><input type="radio" name="경고등 상태" value="점검 필요"></td>
+            <td><input type="radio" name="경고등 상태" value="잘 모름"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="submit" class="submit-btn">점검 신청 제출하기</button>
+    </form>
+  </main>
+
+</body>
+</html>
